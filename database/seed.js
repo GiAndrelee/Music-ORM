@@ -1,4 +1,7 @@
 // Import database and model
+// database/seed.js
+require('dotenv').config();
+const { sequelize, Track } = require('./setup');
 
 // Seed data
 const sampleTracks = [
@@ -99,5 +102,12 @@ const sampleTracks = [
     releaseYear: 1963
   }
 ];
+
+async function seedDatabase() {
+  try {
+    // Connect
+    await sequelize.authenticate();
+    console.log("Connecte
+
 
 // Seed database with sample data
